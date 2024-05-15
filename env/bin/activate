@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/Users/Insper/Quarto semestre/Tecweb/Projeto 2/projeto-2-backend-nicholas/env"
+VIRTUAL_ENV="/Users/Insper/Quarto semestre/Tecweb/Projeto 3/tecweb-projeto3-backend/env"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

@@ -44,6 +44,12 @@ INSTALLED_APPS = [
     'rank',
 ]
 
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',  
+    ],
+}
+
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     'whitenoise.middleware.WhiteNoiseMiddleware',
@@ -80,14 +86,20 @@ WSGI_APPLICATION = "ranking.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
-    'default': dj_database_url.config(
-        default='postgres://bando_de_dados_projeto_2_user:HB9DFesNARw0gtVy94JdE53uUEiR9wew@dpg-cos2cj7sc6pc73dvmhlg-a.oregon-postgres.render.com/bando_de_dados_projeto_2',
-        conn_max_age=600,
-        ssl_require=not DEBUG
-    )
-}
+# DATABASES = {
+#     'default': dj_database_url.config(
+#         default='postgres://bando_de_dados_projeto_2_user:HB9DFesNARw0gtVy94JdE53uUEiR9wew@dpg-cos2cj7sc6pc73dvmhlg-a.oregon-postgres.render.com/bando_de_dados_projeto_2',
+#         conn_max_age=600,
+#         ssl_require=not DEBUG
+#     )
+# }
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators

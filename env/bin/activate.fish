@@ -29,7 +29,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/Users/Insper/Quarto semestre/Tecweb/Projeto 2/projeto-2-backend-nicholas/env"
+set -gx VIRTUAL_ENV "/Users/Insper/Quarto semestre/Tecweb/Projeto 3/tecweb-projeto3-backend/env"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH
