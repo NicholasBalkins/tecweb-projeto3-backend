@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-4%tk@_rh1m5fjo-rp9m+e0031-ul+c@yp(^vvi3rmf3#qgj382"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['projeto-2-backend-nicholas.onrender.com', 'localhost', '127.0.0.1', '0.0.0.0']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'ranking',
     'rank',
+    "rest_framework.authtoken",
 ]
 
 REST_FRAMEWORK = {
